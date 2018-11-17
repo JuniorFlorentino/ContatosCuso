@@ -10,8 +10,8 @@ if(isset($_GET["email"]) || isset($_GET["senha"]) ){
         $conexao = new mysqli("localhost", "root", "", "agenda");
         
 
-		$email= $_GET["email"];
-        $senha=  $_GET["senha"];
+		$email= mysqli_real_escape_string($conexao,$_GET["email"]);
+        $senha= mysqli_real_escape_string($conexao, $_GET["senha"]);
         
 		$query="SELECT * FROM usuario where email='$email' and senha='$senha'  ";
         $result = $conexao->query($query);
