@@ -12,13 +12,16 @@ import { ServidorProvider } from '../providers/servidor/servidor';
 import { DetalhesContatosPage } from '../pages/detalhes-contatos/detalhes-contatos';
 
 import { HttpModule } from '@angular/http';
+import { LoginPage } from '../pages/login/login';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
     ListPage,
-    DetalhesContatosPage
+    DetalhesContatosPage,
+    LoginPage
+
   ],
   imports: [
     BrowserModule,
@@ -30,7 +33,8 @@ import { HttpModule } from '@angular/http';
     MyApp,
     HomePage,
     ListPage,
-    DetalhesContatosPage
+    DetalhesContatosPage,
+    LoginPage
   ],
   providers: [
     StatusBar,

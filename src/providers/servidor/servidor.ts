@@ -11,10 +11,14 @@ import { map } from 'rxjs/operators';
 @Injectable()
 export class ServidorProvider {
 
-    url: string = "http://localhost/phpp/";
+    url: string = "http://localhost/curso/contatosList/ContatosCuso/php/";
 
   constructor(public  http: Http) {
     console.log('ttello ServidorProvider Provider');
+  }
+
+  urlGet(){
+    return this.url;
   }
 
     getPegar(){
